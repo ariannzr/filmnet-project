@@ -1,0 +1,214 @@
+:root {
+  /* color */
+  --color-primary: #1c1c1c;
+  --color-white: #ffffff;
+  --color-transparent: #8f8f8f86;
+  --color-red: #d42b4d;
+  --color-footer: #363636;
+
+  /* Typography */
+  --font-family: "Vazirmatn", sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --font-size-base: 14px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--color-primary);
+}
+html {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-white);
+  direction: rtl;
+}
+button {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+}
+.font-heading {
+  font-weight: var(--font-weight-medium);
+  font-size: 24px;
+}
+.hero {
+  background-image: url(image/Image.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 80vh;
+}
+.mobile-header-svg {
+  display: none;
+}
+
+.container {
+  width: 1664px;
+  margin: 0 auto;
+}
+.flex-display {
+  display: flex;
+}
+.flex-colmn {
+  display: flex;
+  flex-direction: column;
+}
+.main-header {
+  height: 56px;
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: space-between;
+  padding: 13.3px 128px;
+}
+.client-info {
+  display: flex;
+  gap: 20px;
+}
+header button {
+  padding: 4px 14px;
+  border-radius: 4px;
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+header nav a {
+  text-decoration: none;
+  color: var(--color-white);
+  padding: 20px;
+}
+.godfother-img {
+  position: absolute;
+  bottom: 166px;
+  right: 128px;
+}
+
+.btn-primary {
+  background-color: var(--color-transparent);
+  padding: 10px 25px;
+  letter-spacing: 2px;
+  color: var(--color-white);
+  border: none;
+}
+.btn-primary span {
+  color: var(--color-red);
+}
+.btn-header {
+  position: absolute;
+  bottom: 40px;
+  right: 128px;
+  gap: 10px;
+}
+
+/* -------------------------------------------- */
+* a {
+  text-decoration: none;
+  color: inherit;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 64px;
+}
+
+.movie-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 16px;
+}
+.movie-items p {
+  text-align: right;
+}
+.section-heading {
+  text-align: right;
+  text-decoration: none;
+  color: inherit;
+  font-weight: var(--font-weight-medium);
+  font-size: 24px;
+  display: inline;
+  padding-right: 128px;
+}
+/* --------------actors pic---------------- */
+.actors-pic {
+  margin-top: 96px;
+  margin-bottom: 96px;
+  height: 300px;
+  background-image: url(image/midle-pic.png);
+  background-position: center;
+  background-size: cover;
+}
+/* --------------piced movies------------ */
+.piced-movies {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  gap: 16px;
+}
+/* ----------------footer--------------- */
+footer {
+  height: 300px;
+  width: 100%;
+  background-color: var(--color-footer);
+  margin-top: 96px;
+}
+.footer-elements {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 69px;
+  border-bottom: 1px solid var(--color-transparent);
+  padding-bottom: 46px;
+}
+.img-cul {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-list {
+  display: flex;
+  gap: 15px;
+}
+.foter-policy {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 12px;
+  color: var(--color-transparent);
+}
+
+/* ---------------------media--------------------- */
+@media screen and (max-width: 475px) {
+  .nav-header {
+    display: none;
+  }
+
+  .btn-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-elements {
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+  .piced-movies :first-child {
+    width: 100%;
+  }
+  .piced-movies {
+    flex-wrap: wrap;
+  }
+  .movie-items {
+    display: flex;
+  }
+}
