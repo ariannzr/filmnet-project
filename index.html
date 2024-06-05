@@ -17,6 +17,27 @@
     <title>movie</title>
   </head>
   <body>
+    <button class="btn-primary" id="openModal">Send feedback</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="myForm">
+          <h2>فرم نظر خواهی</h2>
+          <label for="name">اسم:</label>
+          <input type="text" id="name" name="name" required /><br /><br />
+          <label for="email">ایمیل:</label>
+          <input type="email" id="email" name="email" required /><br /><br />
+          <label for="message">پیام :</label>
+          <textarea id="message" name="message" required></textarea><br /><br />
+
+          <button class="btn-primary" type="submit">ارسال</button>
+        </form>
+      </div>
+    </div>
+    <!-- ------------------------ -->
     <div class="hero">
       <header>
         <div class="main-header">
@@ -59,43 +80,40 @@
 
     <!-- ----------------------secyion 1 ------------------- -->
 
-    <section>
-      <div class="section-heading">
-        <p>
-          <span>تازه‌های فیلم‌نت<img src="image/Left side arrow.svg" /></span>
-        </p>
-      </div>
+    <section class="latest">
+      <h2>تازه‌های فیلم‌نت<img src="image/Left side arrow.svg" /></h2>
+
       <div class="movie-items">
-        <div>
+        <div class="item">
           <img src="image/Arthur the king.png" alt="Arthur" />
           <p href="#">شاه آرتور</p>
         </div>
-        <div>
+        <div class="item">
           <img src="image/afwaar.png" alt="Arthur" />
           <p href="#">شایعه</p>
         </div>
 
-        <div>
+        <div class="item">
           <img src="image/Tales of babylon.png" alt="Arthur" />
           <p href="#">قصه های بابیلون</p>
         </div>
-        <div>
+        <div class="item">
           <img src="image/Problemista.png" alt="Arthur" />
           <p href="#">دردسرساز</p>
         </div>
-        <div>
+        <div class="item">
           <img src="image/Aftermath.png" alt="Arthur" />
           <p href="#">پس از حادثه</p>
         </div>
-        <div>
+        <div class="item">
           <img src="image/Monkey man.png" alt="Arthur" />
           <p href="#">مرد میمونی</p>
         </div>
-        <div>
+        <div class="item">
           <img src="image/Preheated.png" alt="Arthur" />
           <p href="#">از قبل گرم شده</p>
         </div>
-        <div>
+        <div class="item">
           <img src="image/ordinary angles.png" alt="Arthur" />
           <p href="#">فرشته های معمولی</p>
         </div>
@@ -105,14 +123,18 @@
     <div class="actors-pic"></div>
 
     <!-- -------------section 2-=------------------- -->
-    <section>
-      <div class="section-heading">
-        <a href="#">برگزیده</a>
-      </div>
-      <div class="piced-movies">
-        <img src="image/shab ahangi.png" alt="shab" />
-        <img src="image/afie tehran.png" alt="" />
-        <img src="image/pedar khande.png" alt="shab" />
+    <section class="section-heading">
+      <h2 href="#">برگزیده</h2>
+      <div class="items">
+        <div class="item">
+          <img src="image/shab ahangi.png" alt="shab" />
+        </div>
+        <div class="item">
+          <img src="image/afie tehran.png" alt="afee" />
+        </div>
+        <div class="item">
+          <img src="image/pedar khande.png" alt="shab" />
+        </div>
       </div>
     </section>
     <!-- -------------footer------------------- -->
@@ -148,5 +170,6 @@
         <img src="image/rahnama.svg" />
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
