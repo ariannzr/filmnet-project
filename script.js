@@ -19,20 +19,21 @@ window.onclick = function (event) {
 };
 const moviesListEl = document.getElementById("moviesList");
 let movies;
-fetch("https://moviesapi.codingfront.dev/api/v1/movies")
-  .then(function (response) {
-    hideLoding();
-    return response.json();
-  })
-  .then(function (json) {
-    console.log(json);
-    renderList(json.data);
-    renderPagination(json.metadata);
-  })
-  .catch(function (e) {
-    console.log(e);
-  });
-
+function fetchMovies(page) {
+  fetch("https://moviesapi.codingfront.dev/api/v1/movies?page=" + page)
+    .then(function (response) {
+      hideLoding();
+      return response.json();
+    })
+    .then(function (json) {
+      console.log(json);
+      renderList(json.data);
+      renderPagination(json.metadata);
+    })
+    .catch(function (e) {
+      console.log(e);
+    });
+}
 function renderCard(movie) {
   const colEl = document.createElement("div");
   colEl.className = "col";
@@ -77,10 +78,19 @@ function renderPagination(metadata) {
   for (let idx = 1; idx <= metadata.page_count; idx++) {
     const itemButtonEl = document.createElement("button");
     itemButtonEl.className = "page-link";
+    if (Number(metadata.curent_page) === idx) {
+      itemButtonEl.classList.add("active");
+    }
     itemButtonEl.innerHTML = idx;
+    itemButtonEl.onclick = function () {
+      moviesListEl.innerHTML = "";
+      paginationEl.innerHTML = "";
+      fetchMovies(idx);
+    };
     const itemLiEl = document.createElement("li");
     itemLiEl.className = "page-item";
     itemLiEl.appendChild(itemButtonEl);
     paginationEl.appendChild(itemLiEl);
   }
 }
+fetchMovies();
