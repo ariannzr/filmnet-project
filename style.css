@@ -21,7 +21,10 @@
   box-sizing: border-box;
 }
 body {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary) !important;
+}
+main {
+  background-color: inherit !important;
 }
 html {
   font-family: var(--font-family);
@@ -131,7 +134,7 @@ header nav a {
 .actors-pic {
   margin-top: 96px;
   margin-bottom: 96px;
-  height: 300px;
+  width: 100%;
   background-image: url(image/midle-pic.png);
   background-position: center;
   background-size: cover;
@@ -141,6 +144,7 @@ header nav a {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+  width: 100%;
   justify-content: center;
 }
 
@@ -152,6 +156,7 @@ header nav a {
 }
 .section-heading {
   padding: 40px;
+  color: var(--color-white);
 }
 
 /* ----------------footer--------------- */
@@ -260,4 +265,10 @@ footer {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.pagination-posi {
+  justify-content: center;
+  margin-top: 40px;
+  font-size: 40px;
 }

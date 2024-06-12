@@ -14,6 +14,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
     <title>movie</title>
   </head>
   <body>
@@ -135,6 +136,31 @@
         </div>
       </div>
     </section>
+    <!-- ----------------------api test---------------------- -->
+
+    <div class="album py-5">
+      <div class="container">
+        <div class="spinner-border text-light d-none" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div
+          id="moviesList"
+          class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-6"
+        ></div>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination-posi pagination justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link">Previous</a>
+            </li>
+
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
     <!-- -------------footer------------------- -->
     <footer>
       <div class="footer-elements">
